@@ -12,7 +12,9 @@ ssl._create_default_https_context = ssl._create_unverified_context
 def check_robots_txt(base_url):
     robots_txt_url = f'{base_url}/robots.txt'
     targets_url = [f'{base_url}',
-                   f'{base_url}/articles']
+                   f'{base_url}/articles'
+                   f'{base_url}/articles/*/comments',
+                   f'{base_url}/search']
     user_agent = '*'
 
     # robots.txtの取得
